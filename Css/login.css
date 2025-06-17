@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url("./colors.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: #0f0f0f;
+    font-family: 'Poppins', Courier, monospace;
+}
+
+h1,
+h3,
+label {
+    color: var(--category-text-color);
+}
+
+.loginContainer {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.loginImg {
+    height: 100vh;
+}
+
+.loginImg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.loginForm {
+    position: relative;
+    padding: 10px 10px 0 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto;
+    align-items: center;
+}
+
+.loginPresentation {
+    padding-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+.loginPresentation h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.btnVoltar {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 999;
+}
+
+.btnVoltar a {
+    text-decoration: none;
+    color: var(--category-text-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.loginPresentation h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+.loginForm form {
+    display: flex;
+    max-height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-break: anywhere;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.input input {
+    max-width: 50%;
+    border: 2px solid var(--input-border-color);
+    border-radius: 16px;
+    font-size: 18px;
+    padding: 10px;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    font-weight: 600;
+}
+
+form button {
+    color: var(--btn-text-color);
+    font-size: 1.5em;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: var(--btn-bg-color);
+    max-height: 100%;
+    max-width: 90%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.loginForm button:hover {
+    background-color: var(--btn-text-color);
+    color: var(--btn-bg-color);
+}
+
+.loginForm p {
+    margin-top: 10px;
+    color: var(--muted-text-color);
+}
+
+.switchLogin {
+    color: var(--category-text-color);
+    font-weight: 600;
+}
+
+@media screen and (max-width:600px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .loginImg {
+        display: none !important;
+    }
+
+    .loginContainer {
+        display: flex !important;
+    }
+
+    .loginForm {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .loginForm form {
+        justify-content: space-evenly;
+    }
+
+    .input input {
+        max-width: 75%;
+    }
+
+}

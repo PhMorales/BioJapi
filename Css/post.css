@@ -1,0 +1,452 @@
+@import url("./colors.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/pages_usage/folhas.png);
+    overflow: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+}
+
+.postContainer {
+    backdrop-filter: blur(5px) brightness(0.4);
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post {
+    height: 95%;
+    width: 90%;
+    max-width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 0 4px rgba(0, 0, 0);
+    border-radius: 16px;
+}
+
+
+/* Imagem do post */
+.postImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    background-color: black;
+    border-radius: 16px 0 0 16px;
+    overflow: hidden;
+}
+
+.postImg img,
+.postImg video {
+    display: inline-block;
+    max-width: 100%;
+    height: 100%;
+    max-height: 95vh;
+    width: auto;
+    object-fit: contain;
+}
+
+
+/* Conteúdo do post */
+.postContent {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 5px;
+    background-color: var(--background-color);
+    border-radius: 0 16px 16px 0;
+    overflow: hidden;
+}
+
+/* Informações do autor */
+.infoAuthor {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+/* Parte do autor, com o comentario dele, especie, etc */
+.comentariosInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Parte da espécie */
+.infoTitulo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    color: var(--category-text-color);
+}
+
+.nomePopular {
+    font-weight: 600;
+}
+
+.nomeCientifico {
+    font-style: italic;
+    color: var(--category-text-color);
+}
+
+.especie {
+    display: flex;
+    gap: 5px
+}
+
+.fotoInfo {
+    display: flex;
+    gap: 10px;
+}
+
+/* Header do autor (foto, nome e data da postagem */
+.authorHeader {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.authorHeader .authorData {
+    display: flex;
+    align-items: center;
+    gap: 5px
+}
+
+.authorData img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1 / 1;
+}
+
+.authorData .authorName {
+    max-width: 50%;
+}
+
+.authorName p {
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-weight: 600;
+    line-break: anywhere;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+    overflow: hidden;
+}
+
+.authorData .authorUsername {
+    text-overflow: ellipsis;
+
+}
+
+.postFormatted {
+    width: 75%;
+}
+
+.postFormatted a,
+.comentario a {
+    text-decoration: none;
+    color: var(--category-text-color);
+    transform: scale(1);
+    transition: transform .2s;
+    display: inline-block;
+}
+
+.postFormatted a:hover,
+.comentario a:hover {
+    transform: scale(1.05);
+}
+
+.postDate {
+    font-size: 14px;
+    color: var(--category-text-color);
+    font-weight: 600;
+    width: 100%;
+    text-align: right;
+}
+
+/* Botão de voltar para a página inicial */
+.btnVoltar {
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    line-height: 1;
+    text-decoration: none;
+    color: var(--category-text-color);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.postContent .optionsContainer {
+    right: 20px !important;
+    top: 8%;
+}
+
+/* Botão de like */
+.likeBtn {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: var(--category-text-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.btnLike {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    color: var(--category-text-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Espaço para comentários / formulário de comentários */
+.comentariosContent {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 5px;
+    height: 100%;
+}
+
+/* Campo de comentários */
+.comentarios {
+    flex: 1;
+    max-height: 100%;
+    max-width: 100%;
+    padding-right: 5px;
+    padding-top: 5px;
+    border-top: 3px solid var(--category-text-color);
+    border-bottom: 3px solid var(--category-text-color);
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.comentarios::-webkit-scrollbar,
+.commentText::-webkit-scrollbar {
+    width: 10px;
+}
+
+.comentarios::-webkit-scrollbar-thumb,
+.commentText::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 10px;
+}
+
+.comentarios::-webkit-scrollbar-track,
+.commentText::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-bg-color);
+    border-radius: 10px;
+}
+
+.comentarios::-webkit-scrollbar-thumb:hover,
+.commentText::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover-color);
+    cursor: pointer;
+}
+
+/* Comentário (tanto do autor quanto dos usuarios */
+.comentario {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 40px 1fr 25px;
+    max-height: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.comentario>* {
+    min-width: 0;
+}
+
+.comentarioAutor {
+    position: relative;
+}
+
+.comentarioAutor a {
+    height: 40px;
+    max-width: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transform-origin: left;
+}
+
+.comentarioAutor a img {
+    width: 37px;
+    object-fit: cover;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+}
+
+.comentarioAutor a p {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+.authorComment .commentText {
+    max-height: 8ch;
+}
+
+.commentText,
+.authorComment .commentText {
+    max-width: 100%;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.commentText p {
+    font-size: 16px;
+    white-space: pre-wrap;
+}
+
+.comentario .commentText {
+    padding-left: 1%;
+    max-height: 10ch;
+}
+
+/* Formulário para comentar */
+.formulario {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.editInfo {
+    width: 100%;
+    background-color: var(--background-color);
+    display: none;
+    z-index: 3;
+}
+
+.editInfo.editing {
+    display: block;
+}
+
+.formComentarios {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formComentarios textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--input-border-color);
+    resize: none;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    font-size: 1rem;
+}
+
+.formComentarios button {
+    padding: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formComentarios button:hover {
+    background-color: var(--btn-text-color);
+    color: var(--btn-bg-color);
+}
+
+@media screen and (max-width:600px) {
+    body {
+        overflow-y: scroll !important;
+    }
+
+    .postContainer {
+        padding: 0px;
+        height: 100% !important;
+        width: 100%;
+    }
+
+    .post {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        grid-template-columns: none !important;
+        grid-template-rows: 1fr 1.5fr !important;
+        border-radius: none;
+    }
+
+    .postImg {
+        border-radius: 16px 16px 0 0 !important;
+        max-height: 50vh;
+    }
+
+    .postContent {
+        border-radius: 0 0 16px 16px;
+    }
+
+    .comentarios {
+        max-height: 50vh !important;
+    }
+
+    .comentariosInfo {
+        gap: 2px !important
+    }
+
+    .authorComment .commentText {
+        max-width: 100% !important;
+        width: 100% !important;
+        max-height: 8ch !important;
+    }
+
+
+    .postFormatted>*:not(.authorComment) {
+        max-width: 75% !important;
+    }
+
+    .postContent .optionsContainer {
+        top: 12%;
+    }
+
+}

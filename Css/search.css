@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url("./header/header.css");
+@import url("./posts.css");
+@import url("./colors.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 15vh 1fr;
+    background-color: #f0f0f0;
+    color: #0f0f0f;
+    font-family: 'Poppins', Courier, monospace;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.categoriaContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--input-border-color);
+}
+
+.categoriaImg img {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoriaNomes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoriaNomes h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--category-text-color);
+}
+
+.categoriaNomes h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 400;
+    color: var(--category-text-color);
+}
+
+.categoriaInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.categoriaInfo p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--category-text-color);
+    text-align: center;
+}
+
+.categoriaInfo p.info {
+    font-size: 1rem;
+    color: var(--category-text-color);
+    margin-top: 10px;
+}
+
+.categoriaInfo p a {
+    color: var(--category-link-color);
+    font-weight: 600;
+}
+
+*:not(.categoriaNomes)>h1 {
+    margin-top: 5px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--category-text-color);
+    text-align: center;
+}
+
+.noPosts {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--category-text-color);
+    margin-top: 20px;
+}

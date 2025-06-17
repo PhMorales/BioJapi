@@ -1,0 +1,478 @@
+@import url("./colors.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/pages_usage/folhas.png);
+    font-family: 'Poppins', Courier, monospace;
+    overflow: hidden;
+}
+
+.formContainer {
+    display: flex;
+    backdrop-filter: blur(5px) brightness(0.4);
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.newPostForm {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    height: 95vh;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.imgArea {
+    max-width: 100%;
+    gap: 5px;
+    display: grid;
+    grid-template-rows: calc(95vh/2.3*1.5 - 100px) calc(95vh/2.3*0.8 - 50px) 1fr;
+}
+
+.imgInput {
+    height: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: 5fr 1fr;
+}
+
+.previewContainer {
+    background-color: #0f0f0f;
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.imgPreview,
+.videoPreview {
+    display: none;
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    height: 100%;
+    resize: none;
+}
+
+.imgArea input {
+    height: 100%;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+.imgInput .input {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.imgInput .input p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 30ch;
+}
+
+.inputImagem {
+    color: var(--btn-text-color);
+    font-size: 1em;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: var(--btn-bg-color);
+    max-height: 100%;
+    max-width: 35%;
+    text-align: center;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    font-weight: 600;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inputImagem:hover {
+    background-color: var(--btn-text-color);
+    color: var(--btn-bg-color);
+}
+
+input:not(#imagem),
+textarea {
+    border: 1px solid var(--input-border-color);
+    color: var(--input-text-color);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.infoAnimal {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 3px;
+}
+
+.infoAdicional {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 66% 33%;
+}
+
+.mapInput {
+    gap: 10px;
+}
+
+.mapContainer {
+    height: 100%;
+}
+
+#map {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.infoAdicional button:hover {
+    background-color: var(--btn-text-color);
+    color: var(--btn-bg-color);
+}
+
+.otherInputs {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.blurInputs {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.misc {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.infoAdicional button {
+    color: var(--btn-text-color);
+    font-size: 1em;
+    border: none;
+    align-self: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: var(--btn-bg-color);
+    max-height: 100%;
+    max-width: 40%;
+    text-align: center;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    font-weight: 600;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btnVoltar {
+    position: absolute;
+    top: 0;
+    right: 1%;
+}
+
+.btnVoltar a {
+    text-decoration: none;
+    color: var(--category-text-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.misc label {
+    align-self: center;
+}
+
+.misc input {
+    align-self: center;
+    max-width: 50%;
+    padding: 5px 10px;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+input {
+    padding: 10px;
+    max-height: 4ch;
+}
+
+.sensivel label,
+.identificacao label {
+    position: relative;
+    max-width: 100px;
+}
+
+.identificacao {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.identificacao select {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid var(--input-border-color);
+    padding: 5px;
+}
+
+.identificacao label {
+    text-align: center;
+    position: relative;
+    min-width: 200px;
+    width: 80%;
+}
+
+.checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
+}
+
+.identificacao .checkmark {
+    top: 100%;
+    left: calc(50% - 12.5px);
+}
+
+.sensivel label:hover input~.checkmark,
+.identificacao label:hover input~.checkmark {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.sensivel label input:checked~.checkmark,
+.identificacao label input:checked~.checkmark {
+    background-color: var(--category-text-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.sensivel label input:checked~.checkmark:after,
+.identificacao label input:checked~.checkmark:after {
+    display: block;
+}
+
+.sensivel label .checkmark:after,
+.identificacao .checkmark:after {
+    left: calc(50% - 4px);
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--btn-bg-color);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .previewContainer {
+        height: 200px;
+    }
+
+    .btnVoltar {
+        height: 15px;
+    }
+
+    .newPostForm {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding-bottom: 5px;
+        padding-top: 50px;
+        border-radius: none;
+    }
+
+    .formContainer {
+        height: 100%;
+    }
+
+    .infoAnimal {
+        grid-template-columns: 1fr;
+    }
+
+    .identificacao {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .identificacao .checkmark {
+        top: 0;
+        left: 100%;
+    }
+
+    .otherInputs {
+        grid-template-columns: 1fr;
+    }
+
+    .imgArea {
+        grid-template-rows: auto;
+    }
+
+    .imgInput {
+        grid-template-rows: auto;
+    }
+
+    .btnVoltar {
+        position: absolute;
+        top: 1%;
+        left: 3%;
+    }
+
+    .misc {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+
+    .infoAdicional {
+        position: initial;
+        grid-template-rows: 250px 1fr;
+        gap: 5px;
+    }
+
+    .blurInputs {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .blurInputs .checkmark {
+        left: calc(100% + 12.5px);
+    }
+
+    .otherInputs {
+        gap: 10px;
+    }
+
+    .misc .input {
+        gap: 5px;
+        flex-direction: row;
+    }
+
+    .misc input {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .inputImagem {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .misc input {
+        max-width: 100%;
+        font-size: 1em;
+    }
+
+    .imgInput .input {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .imgInput .input p {
+        max-width: 100%;
+    }
+
+
+    .identificacao .checkmark {
+        top: 12.5px;
+        left: calc(100% + 12.5px);
+    }
+
+    .identificacao label {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .infoAdicional button {
+        max-width: 100%;
+    }
+
+    .misc {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .misc .input {
+        gap: 5px;
+        flex-direction: row;
+    }
+
+}

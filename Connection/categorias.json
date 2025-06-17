@@ -1,0 +1,79 @@
+{
+    "mamífero": {
+        "nome_popular": "Mamífero",
+        "nome_cientifico": "Mammalia",
+        "descricao": "Mamíferos são animais vertebrados que possuem glândulas mamárias, pelos e três ossos no ouvido médio. Eles são endotérmicos, ou seja, conseguem regular sua temperatura corporal, e geralmente dão à luz filhotes vivos.",
+        "pesquisa": "",
+        "imagem": "mamífero.jpg"
+    },
+    "ave": {
+        "nome_popular": "Ave",
+        "nome_cientifico": "Aves",
+        "descricao": "Aves são animais vertebrados com penas, bico e a capacidade de voar. Elas possuem um esqueleto leve e adaptado para o voo, além de serem endotérmicas.",
+        "pesquisa": "https://wikiaves.com.br",
+        "imagem": "ave.jpg"
+    },
+    "réptil": {
+        "nome_popular": "Réptil",
+        "nome_cientifico": "Reptilia",
+        "descricao": "Répteis são animais vertebrados de sangue frio, com pele coberta por escamas ou placas. Eles geralmente põem ovos e são adaptados a ambientes terrestres e aquáticos.",
+        "pesquisa": "",
+        "imagem": "réptil.jpg"
+    },
+    "anfíbio": {
+        "nome_popular": "Anfíbio",
+        "nome_cientifico": "Amphibia",
+        "descricao": "Anfíbios são animais vertebrados que vivem parte de suas vidas na água e parte em terra. Eles possuem pele úmida e permeável, e geralmente passam por uma metamorfose durante seu desenvolvimento.",
+        "pesquisa": "",
+        "imagem": "anfíbio.jpg"
+    },
+    "peixe": {
+        "nome_popular": "Peixe",
+        "nome_cientifico": "Pisces",
+        "descricao": "Peixes são animais vertebrados aquáticos que possuem brânquias para respirar debaixo d'água. Eles são ectotérmicos e possuem nadadeiras para se locomover.",
+        "pesquisa": "",
+        "imagem": "peixe.jpg"
+    },
+    "inseto": {
+        "nome_popular": "Inseto",
+        "nome_cientifico": "Insecta",
+        "descricao": "Insetos são animais invertebrados com corpo segmentado, exoesqueleto e três pares de patas. Eles são o grupo mais diverso de animais na Terra e desempenham papéis importantes nos ecossistemas.",
+        "pesquisa": "https://www.insetologia.com.br/p/identifique-voce-mesmo.html",
+        "imagem": "inseto.jpg"
+    },
+    "aracnídeo": {
+        "nome_popular": "Aracnídeo",
+        "nome_cientifico": "Arachnida",
+        "descricao": "Aracnídeos são animais invertebrados com corpo dividido em duas partes, oito patas e geralmente possuem glândulas produtoras de veneno. Exemplos incluem aranhas, escorpiões e carrapatos.",
+        "pesquisa": "https://www.insetologia.com.br/p/identifique-voce-mesmo.html",
+        "imagem": "aracnídeo.jpg"
+    },
+    "arbusto": {
+        "nome_popular": "Arbusto",
+        "nome_cientifico": "Arbustos",
+        "descricao": "Arbustos são plantas lenhosas de porte baixo, com múltiplos caules que se ramificam desde a base. Eles são importantes para a biodiversidade e podem fornecer abrigo e alimento para diversos animais.",
+        "pesquisa": "",
+        "imagem": "arbusto.jpg"
+    },
+    "rasteira": {
+        "nome_popular": "Rasteira",
+        "nome_cientifico": "Plantas rasteiras",
+        "descricao": "Plantas rasteiras são aquelas que crescem próximo ao solo, sem caules elevados. Elas podem ser herbáceas ou lenhosas e são importantes para a cobertura do solo e controle da erosão.",
+        "pesquisa": "",
+        "imagem": "rasteira.jpg"
+    },
+    "árvore": {
+        "nome_popular": "Árvore",
+        "nome_cientifico": "Árvores",
+        "descricao": "Árvores são plantas lenhosas de grande porte, com um tronco principal e ramos que se estendem para o alto. Elas desempenham papéis cruciais nos ecossistemas, como fornecer sombra, habitat e oxigênio.",
+        "pesquisa": "",
+        "imagem": "árvore.jpg"
+    },
+    "cogumelo": {
+        "nome_popular": "Cogumelo",
+        "nome_cientifico": "Fungos",
+        "descricao": "Cogumelos são organismos fúngicos que podem ser encontrados em diversos ambientes. Eles desempenham papéis importantes na decomposição de matéria orgânica e na formação de simbioses com plantas.",
+        "pesquisa": "",
+        "imagem": "cogumelo.jpg"
+    }
+}

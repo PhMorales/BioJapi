@@ -1,0 +1,22 @@
+:root {
+    --text-color: #002909;
+    --header-color: #063f27;
+    --background-color: #f0fcf0;
+    --header-text-color: #f0f0f0;
+    --category-text-color: #063f27;
+    --btn-bg-color: #AFD879;
+    --btn-text-color: #063f27;
+    --input-border-color: #063f27;
+    --input-bg-color: #ffffff;
+    --input-text-color: #074917;
+    --muted-text-color: #253d33;
+    --scrollbar-bg-color: #b6e0a6;
+    --scrollbar-bg-hover-color: #849c7c;
+    --scrollbar-thumb-color: #006030;
+    --scrollbar-thumb-hover-color: #063f27;
+    --comment-bg-hover-color: #b3e0a6;
+    --success-toast-bg: #ccffcc;
+    --warning-toast-bg: #fdff9a;
+    --error-toast-bg: #ffcccc;
+    --text-gradient-color: #81b84b;
+}

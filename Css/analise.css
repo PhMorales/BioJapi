@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url(./colors.css);
+@import url(./header/header.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', Courier, monospace;
+    background-color: #F5F1E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.aux {
+    width: 25%;
+}
+
+.content {
+    background-color: white;
+    padding: 2rem;
+    display: grid;
+    gap: 20px;
+    width: auto;
+}
+
+
+.btnsDownload {
+    margin-top: 3rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.btnsDownload h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #063F27;
+}
+
+
+.btnsDownload button {
+    font-family: 'Poppins', Courier, monospace;
+    height: 45px;
+    width: 160px;
+    font-size: 1rem;
+    background-color: #063F27;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #052f1e;
+}
+
+.Analise {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.Analise h2 {
+    font-size: 1.5rem;
+    color: #063F27;
+}
+
+.SerieTemporal,
+.Especie {
+    display: grid;
+    gap: 1rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.SerieTemporal h3,
+.Especie h2 {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.tempoInicial,
+.tempoFinal,
+.inputGenero,
+.inputEspecie {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.tempoInicial input,
+.tempoFinal input,
+.inputGenero input,
+.inputEspecie input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins', Courier, monospace;
+    font-size: 1rem;
+}

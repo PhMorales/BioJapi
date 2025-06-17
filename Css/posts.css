@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.postCard *:not(h2) {
+    font-size: 1.1rem;
+    font-weight: 500px;
+}
+
+.posts {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+    padding: 20px 80px;
+}
+
+.postCard {
+    max-width: 100%;
+    min-width: 270px;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    height: 300px;
+    grid-template-rows: 150px 1fr;
+    transition: transform .2s;
+    text-decoration: none;
+    font-family: 'Poppins', Courier, monospace;
+}
+
+.postCard:hover {
+    transform: scale(1.1);
+}
+
+
+
+.postImg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background-color: #0f0f0f;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.postCard img,
+.postCard video {
+    display: block;
+    max-width: 100%;
+    max-height: 151px;
+    object-fit: contain;
+}
+
+.sensivel {
+    filter: blur(10px);
+}
+
+.video::after {
+    position: absolute;
+    top: calc(50% - 16px);
+    right: calc(50% - 16px);
+    line-height: 1;
+    content: "▶";
+    font-size: 32px;
+    color: #c0c0c0;
+    text-shadow: -3px -4.75px 0 #000,
+        2px -2px 0 #000,
+        -3px 4.75px 0 #000,
+        2px 2px 0 #000,
+        -3px 0px 0 #000,
+        6px 0px 0 #000,
+        0px -3px 0 #000,
+        0px 3px 0 #000;
+}
+
+.card-content {
+    position: relative;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 50px 25px 25px 1fr;
+}
+
+.card-content h2 {
+    color: var(--category-text-color);
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-content p {
+    color: var(--category-text-color);
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-content .authorInfo {
+    max-width: 250px;
+    display: flex;
+    gap: 5px
+}
+
+.authorInfo img {
+    max-width: 27.5px;
+    max-height: 27.5px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+}
+
+.authorInfo .authorName {
+    max-width: 40%;
+}
+
+.authorName p {
+    font-weight: 600;
+    line-break: anywhere;
+    text-overflow: ellipsis;
+
+}
+
+.authorInfo .authorUsername {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 40%;
+
+}
+
+.legenda {
+    max-width: 75% !important;
+}
+
+.postTime,
+.likeNcommentCount {
+    position: absolute;
+    bottom: 5%;
+}
+
+.postTime {
+    right: 5%;
+}
+
+.likeNcommentCount {
+    color: var(--category-text-color);
+    left: 5%;
+}
+
+.likeNcommentCount {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.likeCount,
+.commentCount {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+@media screen and (max-width:600px) {
+    .posts {
+        padding: 20px 60px;
+
+    }
+
+}
